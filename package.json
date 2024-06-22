@@ -1,28 +1,32 @@
 {
-  "name": "template",
+  "name": "testing-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack",
     "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zeronicc/template.git"
+    "url": "git+https://github.com/freddster14/Testing-Project"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Zeronicc/template/issues"
+    "url": "https://github.com/freddster14/Testing-Project"
   },
-  "homepage": "https://github.com/Zeronicc/template#readme",
+  "homepage": "https://github.com/freddster14/Testing-Project#readme",
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "babel-jest": "^29.7.0",
     "css-loader": "^7.1.1",
     "css-minimizer-webpack-plugin": "^6.0.0",
     "html-webpack-plugin": "^5.6.0",
+    "jest": "^29.7.0",
     "mini-css-extract-plugin": "^2.9.0",
     "webpack": "^5.91.0"
   }

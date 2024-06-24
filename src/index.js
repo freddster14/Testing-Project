@@ -1,11 +1,20 @@
 
 function capitalize(string) {
-    const firstChar = string.at(0).toUpperCase()
-    const notFirstChar = string.slice(1, string.length)
-    return firstChar + notFirstChar
+    if (typeof string !== "string") return 'invalid input'
+   let newStr = null
+    for(let n in string){
+        console.log(string.at(n).match(/[a-zA-Z]/g))
+        if(string.at(n).match(/[a-zA-Z]/g)){
+            newStr = string.replace(`${string.at(n)}`, string.at(n).toUpperCase());
+            break;
+        }
+    }
+    if(newStr === null) return 'invalid input'
+    return newStr
 }
 
 function reverseString(string) {
+    if (typeof string !== "string") return 'invalid input'
     let length = string.length;
     let reversed = '';
     for(let n in string){
@@ -32,7 +41,9 @@ function caesarCipher(string, shift) {
     const alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m',
                     'n','o','p','q','r','s','t','u','v','w','x','y','z'];
     let encrypted = '';
+    if(!isNaN(string)) return 'input is a number'
     for(let n in string){
+        
         //Pushes none characters
         if(!string[n].match(/[a-zA-Z]/g)) {
             encrypted += string[n]

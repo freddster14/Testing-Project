@@ -3,9 +3,9 @@ import {capitalize, reverseString, Calculator, caesarCipher, analyzeArray} from 
 test('strings first character capitalized', () => {
     expect(capitalize('hello world')).toBe('Hello world');
     expect(capitalize('jest')).toBe('Jest');
-    expect(capitalize('12')).toBe('no characters');
+    expect(capitalize('12')).toBe('invalid input');
     expect(capitalize(21)).toBe('invalid input');
-    expect(capitalize('#*rcv#')).toBe('#*Rcv#');
+    expect(capitalize('#*rCv#')).toBe('#*RCv#');
 });
 
 test('reverses the string' , () => {

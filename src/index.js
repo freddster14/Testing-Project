@@ -1,7 +1,7 @@
 
 function capitalize(string) {
     if (typeof string !== "string") return 'invalid input'
-   let newStr = null
+    let newStr = null
     for(let n in string){
         console.log(string.at(n).match(/[a-zA-Z]/g))
         if(string.at(n).match(/[a-zA-Z]/g)){
@@ -25,16 +25,32 @@ function reverseString(string) {
 } 
 class Calculator{
     add(a, b){
+        if(!this.validate(a, b)) return 'invalid input'
+        a = Number(a);
+        b = Number(b);
         return a + b
     }
     subtract(a, b){
+        if(!this.validate(a, b)) return 'invalid input'
+        a = Number(a);
+        b = Number(b);
         return a - b
     }
     divide(a, b){
-        return a / b
+        if(!this.validate(a, b)) return 'invalid input'
+        a = Number(a);
+        b = Number(b);
+        return Math.round(a / b)
     }
     multiply(a, b){
-        return a * b
+        if(!this.validate(a, b)) return 'invalid input'
+        a = Number(a);
+        b = Number(b);
+        return Math.round(a * b)
+    }
+    validate(a, b){
+        if (isNaN(a) || isNaN(b)) return false
+        return true
     }
 }
 function caesarCipher(string, shift) {

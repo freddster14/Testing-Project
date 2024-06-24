@@ -24,8 +24,8 @@ test('calculates return result', () => {
     expect(calculator.multiply(33, 4)).toBe(132);
     expect(calculator.add('3', 2)).toBe(5);
     expect(calculator.subtract('three', 2)).toBe('invalid input');
-    expect(calculator.divide(100, 3)).toBeCloseTo(33.3);
-    expect(calculator.multiply('21', 5)).toBe(105)
+    expect(calculator.divide(100, 3)).toBe(33);
+    expect(calculator.multiply('*%^#', 5)).toBe('invalid input')
 });
 
 test('shifts string by num amount return encrypted string', () => {

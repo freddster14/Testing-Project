@@ -32,6 +32,11 @@ test('shifts string by num amount return encrypted string', () => {
     expect(caesarCipher('xyz', 3)).toBe('abc');
     expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+    expect(caesarCipher('Asta', 14)).toBe('Ogho');
+    expect(caesarCipher('Yoshi', 10)).toBe('Iycrs');
+    expect(caesarCipher('Y^o%&*', 5)).toBe('D^t%&*');
+    expect(caesarCipher(209, 2)).toBe('input is a number')
+
 })
 
 test('array of numbers returns average, min, max, and length' , () => {

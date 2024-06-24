@@ -3,11 +3,17 @@ import {capitalize, reverseString, Calculator, caesarCipher, analyzeArray} from 
 test('strings first character capitalized', () => {
     expect(capitalize('hello world')).toBe('Hello world');
     expect(capitalize('jest')).toBe('Jest');
+    expect(capitalize('12')).toBe('no characters');
+    expect(capitalize(21)).toBe('invalid input');
+    expect(capitalize('#*rcv#')).toBe('#*Rcv#');
 });
 
 test('reverses the string' , () => {
     expect(reverseString('snoops')).toBe('spoons');
     expect(reverseString('like')).toBe('ekil');
+    expect(reverseString(23)).toBe('invalid input');
+    expect(reverseString('*%GeerT')).toBe('TreeG%*');
+    expect(reverseString('321')).toBe('123');
 });
 
 test('calculates return result', () => {

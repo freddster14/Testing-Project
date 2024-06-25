@@ -1,10 +1,9 @@
-# Project Name
-Live Preview: [Click Here]()
+# Test Driven Development Practice
 ## Technologies Used
 
 * JavaScript
-* HTML5
-* CSS3
+* Jest
 * Webpack
 
 ## Description
+Project from The Odin Project. Using Jest to shrapen my TDD skills.
